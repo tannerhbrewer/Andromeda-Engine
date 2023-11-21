@@ -2,7 +2,7 @@
 project "Sandbox"
 	kind "ConsoleApp"
 	language "C++"
-	cppdialect "C++20"
+	cppdialect "C++17"
 	staticruntime "off"
 
 	targetdir ("%{wks.location}/bin/" .. outputdir .. "/%{prj.name}")
@@ -30,21 +30,19 @@ project "Sandbox"
 
 	filter "system:windows"
        systemversion "latest"
-       defines { "WINDOWS" }
+       defines { "MATTER_PLATFORM_WINDOWS" }
 
    filter "configurations:Debug"
-       defines { "DEBUG" }
+       defines { "MATTER_DEBUG" }
        runtime "Debug"
        symbols "On"
 
    filter "configurations:Release"
-       defines { "RELEASE" }
+       defines { "MATTER_RELEASE" }
        runtime "Release"
        optimize "On"
-       symbols "On"
 
    filter "configurations:Dist"
-       defines { "DIST" }
+       defines { "MATTER_DIST" }
        runtime "Release"
        optimize "On"
-       symbols "Off"
