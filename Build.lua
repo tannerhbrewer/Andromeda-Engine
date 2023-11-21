@@ -1,8 +1,8 @@
 
-workspace "Blank Project"
+workspace "Andromeda-Engine"
 	architecture "x64"
 	configurations { "Debug", "Release", "Dist" }
-	startproject "Application"
+	startproject "Sandbox"
 
 	filter "system:windows"
 		buildoptions { "/EHsc", "/Zc:preprocessor", "/Zc:__cplusplus" }
@@ -10,7 +10,7 @@ workspace "Blank Project"
 outputdir = "%{cfg.buildcfg}-%{cfg.system}-%{cfg.architecture}"
 
 group "Core"
-	include "Core/Build-Core.lua"
+	include "Matter/Build-Matter.lua"
 group ""
 
-include "Application/Build-Application.lua"
+include "Sandbox/Build-Sandbox.lua"

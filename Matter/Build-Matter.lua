@@ -1,6 +1,6 @@
 
-project "Application"
-	kind "ConsoleApp"
+project "Matter"
+	kind "StaticLib"
 	language "C++"
 	cppdialect "C++20"
 	staticruntime "off"
@@ -18,19 +18,12 @@ project "Application"
 	includedirs {
 
 		"src",
-		"%{wks.location}/Core/src"
-
-	}
-
-	links {
-
-		"Core"
 
 	}
 
 	filter "system:windows"
        systemversion "latest"
-       defines { "WINDOWS" }
+       defines { }
 
    filter "configurations:Debug"
        defines { "DEBUG" }

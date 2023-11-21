@@ -6,7 +6,7 @@ namespace Core {
 
 	void PrintMessage() {
 
-		std::cout << "Hello World!\n";
+		std::cout << "Welcome to the Matter Base Engine!\n";
 		std::cin.get();
 
 	}
