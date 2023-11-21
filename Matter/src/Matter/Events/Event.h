@@ -1,9 +1,8 @@
 #pragma once
 
-#include "Matter/Core/Base.h"
+#include "mtpch.h"
 
-#include <string>
-#include <functional>
+#include "Matter/Core/Base.h"
 
 namespace Matter {
 

@@ -2,8 +2,6 @@
 
 #include "Event.h"
 
-#include <sstream>
-
 namespace Matter {
 
 	class WindowResizeEvent : public Event

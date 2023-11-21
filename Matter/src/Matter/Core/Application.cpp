@@ -1,3 +1,5 @@
+#include "mtpch.h"
+
 #include "Application.h"
 
 #include "Matter/Events/ApplicationEvent.h"

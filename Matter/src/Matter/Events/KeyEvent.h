@@ -2,8 +2,6 @@
 
 #include "Event.h"
 
-#include <sstream>
-
 namespace Matter {
 
 	class KeyEvent : public Event {
