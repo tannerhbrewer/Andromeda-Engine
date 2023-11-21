@@ -5,7 +5,7 @@ class SandboxApplication : public Matter::Application {
 public:
 	SandboxApplication() {
 
-
+		APPLICATION_INFO("Sandbox Application Created.");
 
 	}
 

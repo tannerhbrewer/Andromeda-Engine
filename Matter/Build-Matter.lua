@@ -18,6 +18,7 @@ project "Matter"
 	includedirs {
 
 		"src",
+		"Dependencies/spdlog/include",
 
 	}
 

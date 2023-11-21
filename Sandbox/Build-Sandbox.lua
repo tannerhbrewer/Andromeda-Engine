@@ -18,7 +18,8 @@ project "Sandbox"
 	includedirs {
 
 		"src",
-		"%{wks.location}/Matter/src"
+		"%{wks.location}/Matter/src",
+		"%{wks.location}/Matter/Dependencies/spdlog/include",
 
 	}
 
