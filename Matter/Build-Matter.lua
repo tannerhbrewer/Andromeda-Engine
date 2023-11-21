@@ -22,6 +22,14 @@ project "Matter"
 
 		"src",
 		"Dependencies/spdlog/include",
+		"Dependencies/GLFW/include",
+
+	}
+
+	links {
+
+		"GLFW",
+		"opengl32.lib",
 
 	}
 

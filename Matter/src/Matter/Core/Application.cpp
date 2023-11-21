@@ -3,13 +3,14 @@
 #include "Application.h"
 
 #include "Matter/Events/ApplicationEvent.h"
-#include "Matter/Core/Logger.h"
+
+#include <GLFW/glfw3.h>
 
 namespace Matter {
 
 	Application::Application() {
 
-
+		m_Window = std::unique_ptr<Window>(Window::Create());
 
 	}
 
@@ -21,14 +22,13 @@ namespace Matter {
 
 	void Application::Run() {
 
-		WindowResizeEvent e(1280, 720);
+		while (m_Running) {
 
-		if (e.IsInCategory(EventCategoryApplication))
-			MATTER_TRACE(e);
-		if (e.IsInCategory(EventCategoryInput))
-			MATTER_INFO(e);
+			glClearColor(0.3f, 0.3f, 0.3f, 1);
+			glClear(GL_COLOR_BUFFER_BIT);
+			m_Window->Update();
 
-		while (true);
+		}
 
 	}
 

@@ -9,6 +9,10 @@ workspace "Andromeda-Engine"
 
 outputdir = "%{cfg.buildcfg}-%{cfg.system}-%{cfg.architecture}"
 
+group "Dependencies"
+	include "Matter/Dependencies/GLFW"
+group ""
+
 group "Core"
 	include "Matter/Build-Matter.lua"
 group ""
