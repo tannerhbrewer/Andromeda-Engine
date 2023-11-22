@@ -23,13 +23,21 @@ project "Matter"
 		"src",
 		"Dependencies/spdlog/include",
 		"Dependencies/GLFW/include",
+		"Dependencies/Glad/include",
 
 	}
 
 	links {
 
 		"GLFW",
+		"Glad",
 		"opengl32.lib",
+
+	}
+
+	defines {
+
+		"GLFW_INCLUDE_NONE",
 
 	}
 

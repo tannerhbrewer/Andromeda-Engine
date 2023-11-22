@@ -6,6 +6,8 @@
 #include "Matter/Events/KeyEvent.h"
 #include "Matter/Events/MouseEvent.h"
 
+#include <glad/glad.h>
+
 namespace Matter {
 
 	static bool s_GLFWInitialized = false;
@@ -45,7 +47,7 @@ namespace Matter {
 		if (!s_GLFWInitialized) {
 
 			int success = glfwInit();
-			MATTER_ASSERT(success, "Could not initialize GLFW.");
+			MATTER_ASSERT(success, "Failed to initialize GLFW.");
 
 			glfwSetErrorCallback(GLFWErrorCallback);
 
@@ -55,6 +57,8 @@ namespace Matter {
 
 		m_Window = glfwCreateWindow((int)properties.Width, (int)properties.Height, m_Data.Title.c_str(), nullptr, nullptr);
 		glfwMakeContextCurrent(m_Window);
+		int status = gladLoadGLLoader((GLADloadproc)glfwGetProcAddress);
+		MATTER_ASSERT(status, "Failed to initialize Glad.");
 		glfwSetWindowUserPointer(m_Window, &m_Data);
 		SetVSync(true);
 
