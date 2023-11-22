@@ -1,5 +1,9 @@
 #pragma once
 
+#ifdef MATTER_DEBUG
+	#define MATTER_ENABLE_ASSERTS
+#endif
+
 #ifdef MATTER_ENABLE_ASSERTS
 	#define APPLICATION_ASSERT(x, ...) { if(!(x)) { CLIENT_ERROR("Assertion Failed: {0}", __VA_ARGS__); __debugbreak(); } }
 	#define MATTER_ASSERT(x, ...) { if(!(x)) { MATTER_ERROR("Assertion Failed: {0}", __VA_ARGS__); __debugbreak(); } }
