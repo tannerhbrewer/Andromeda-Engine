@@ -12,7 +12,7 @@ namespace Matter {
 
 	public:
 		ImGuiLayer();
-		~ImGuiLayer();
+		~ImGuiLayer() = default;
 
 		virtual void Attach() override;
 		virtual void Detach() override;

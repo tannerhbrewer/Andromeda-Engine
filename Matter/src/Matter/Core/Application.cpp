@@ -25,23 +25,15 @@ namespace Matter {
 
 	}
 
-	Application::~Application() {
-
-
-
-	}
-
 	void Application::PushLayer(Layer* layer) {
 
 		m_LayerStack.PushLayer(layer);
-		layer->Attach();
 
 	}
 
 	void Application::PushOverlay(Layer* overlay) {
 
 		m_LayerStack.PushOverlay(overlay);
-		overlay->Attach();
 
 	}
 

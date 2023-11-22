@@ -1,6 +1,7 @@
 #pragma once
 
 #include "Matter/Core/Window.h"
+#include "Matter/Renderer/GraphicsContext.h"
 
 #include <GLFW/glfw3.h>
 
@@ -29,6 +30,7 @@ namespace Matter {
 
 	private:
 		GLFWwindow* m_Window;
+		GraphicsContext* m_Context;
 
 		struct WindowData {
 

@@ -8,7 +8,7 @@ namespace Matter {
 
 	public:
 		Layer(const std::string& name = "Layer");
-		virtual ~Layer();
+		virtual ~Layer() = default;
 
 		virtual void Attach() {}
 		virtual void Detach() {}

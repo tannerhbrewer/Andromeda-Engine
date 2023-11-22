@@ -6,7 +6,7 @@
 #include "Matter/Events/KeyEvent.h"
 #include "Matter/Events/MouseEvent.h"
 
-#include <glad/glad.h>
+#include "Platform/OpenGL/OpenGLContext.h"
 
 namespace Matter {
 
@@ -56,9 +56,10 @@ namespace Matter {
 		}
 
 		m_Window = glfwCreateWindow((int)properties.Width, (int)properties.Height, m_Data.Title.c_str(), nullptr, nullptr);
-		glfwMakeContextCurrent(m_Window);
-		int status = gladLoadGLLoader((GLADloadproc)glfwGetProcAddress);
-		MATTER_ASSERT(status, "Failed to initialize Glad.");
+		
+		m_Context = new OpenGLContext(m_Window);
+		m_Context->Initialize();
+
 		glfwSetWindowUserPointer(m_Window, &m_Data);
 		SetVSync(true);
 
@@ -179,7 +180,7 @@ namespace Matter {
 	void WindowsWindow::Update() {
 
 		glfwPollEvents();
-		glfwSwapBuffers(m_Window);
+		m_Context->SwapBuffers();
 
 	}
 

@@ -21,12 +21,14 @@ namespace Matter {
 
 		m_Layers.emplace(m_Layers.begin() + m_LayerInsertIndex, layer);
 		m_LayerInsertIndex++;
+		layer->Attach();
 
 	}
 
 	void LayerStack::PushOverlay(Layer* overlay) {
 
 		m_Layers.emplace_back(overlay);
+		overlay->Attach();
 
 	}
 
@@ -38,6 +40,7 @@ namespace Matter {
 
 			m_Layers.erase(it);
 			m_LayerInsertIndex--;
+			layer->Detach();
 
 		}
 
@@ -47,8 +50,12 @@ namespace Matter {
 
 		auto it = std::find(m_Layers.begin(), m_Layers.end(), overlay);
 
-		if (it != m_Layers.end())
+		if (it != m_Layers.end()) {
+
 			m_Layers.erase(it);
+			overlay->Detach();
+
+		}
 
 	}
 
