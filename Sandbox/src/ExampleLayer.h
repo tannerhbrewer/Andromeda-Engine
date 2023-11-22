@@ -2,6 +2,8 @@
 
 #include <Matter/Matter.h>
 
+#include "imgui/imgui.h"
+
 class ExampleLayer : public Matter::Layer {
 
 public:
@@ -11,6 +13,14 @@ public:
 
 		if (Matter::Input::IsKeyPressed(KEY_TAB))
 			APPLICATION_TRACE("Tab key is pressed (poll).");
+
+	}
+
+	virtual void ImGuiRender() override {
+
+		ImGui::Begin("Test");
+		ImGui::Text("Hello World!");
+		ImGui::End();
 
 	}
 

@@ -4,6 +4,8 @@
 #include "Matter/Events/Event.h"
 #include "Matter/Events/ApplicationEvent.h"
 
+#include "Matter/ImGui/ImGuiLayer.h"
+
 #include "Matter/Core/Window.h"
 
 namespace Matter {
@@ -29,6 +31,7 @@ namespace Matter {
 
 	private:
 		std::unique_ptr<Window> m_Window;
+		ImGuiLayer* m_ImGuiLayer;
 		LayerStack m_LayerStack;
 
 		bool m_Running = true;

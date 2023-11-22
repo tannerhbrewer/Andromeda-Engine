@@ -13,6 +13,7 @@ namespace Matter {
 		virtual void Attach() {}
 		virtual void Detach() {}
 		virtual void Update() {}
+		virtual void ImGuiRender() {}
 		virtual void OnEvent(Event& e) {}
 
 		inline const std::string& GetName() const { return m_DebugName; }
