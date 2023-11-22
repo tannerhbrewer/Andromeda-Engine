@@ -12,6 +12,7 @@ outputdir = "%{cfg.buildcfg}-%{cfg.system}-%{cfg.architecture}"
 group "Dependencies"
 	include "Matter/Dependencies/GLFW"
 	include "Matter/Dependencies/Glad/Build-GLAD.lua"
+	include "Matter/Dependencies/imgui/Build-ImGui.lua"
 group ""
 
 group "Core"

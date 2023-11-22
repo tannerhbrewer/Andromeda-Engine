@@ -8,6 +8,7 @@ public:
 	SandboxApplication() {
 
 		PushLayer(new ExampleLayer());
+		PushOverlay(new Matter::ImGuiLayer());
 
 	}
 

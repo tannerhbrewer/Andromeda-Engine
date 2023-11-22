@@ -24,6 +24,7 @@ project "Matter"
 		"Dependencies/spdlog/include",
 		"Dependencies/GLFW/include",
 		"Dependencies/Glad/include",
+		"Dependencies/imgui",
 
 	}
 
@@ -31,6 +32,7 @@ project "Matter"
 
 		"GLFW",
 		"Glad",
+		"ImGui",
 		"opengl32.lib",
 
 	}
@@ -38,6 +40,7 @@ project "Matter"
 	defines {
 
 		"GLFW_INCLUDE_NONE",
+		"_CRT_SECURE_NO_WARNINGS",
 
 	}
 
