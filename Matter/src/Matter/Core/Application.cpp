@@ -2,6 +2,8 @@
 
 #include "Application.h"
 
+#include "Matter/Core/Input.h"
+
 #include <glad/glad.h>
 
 namespace Matter {
