@@ -20,6 +20,7 @@ project "Sandbox"
 		"src",
 		"%{wks.location}/Matter/src",
 		"%{wks.location}/Matter/Dependencies/spdlog/include",
+		"%{wks.location}/Matter/Dependencies/glm",
 
 	}
 

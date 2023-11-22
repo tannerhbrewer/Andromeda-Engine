@@ -15,6 +15,8 @@ project "Matter"
 
 		"src/**.h",
 		"src/**.cpp",
+		"Dependencies/glm/glm/**.hpp",
+		"Dependencies/glm/glm/**.inl",
 
 	}
 
@@ -25,6 +27,7 @@ project "Matter"
 		"Dependencies/GLFW/include",
 		"Dependencies/Glad/include",
 		"Dependencies/imgui",
+		"Dependencies/glm",
 
 	}
 
