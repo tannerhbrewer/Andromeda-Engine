@@ -1,11 +1,13 @@
 #include <Matter/Matter.h>
 
+#include "ExampleLayer.h"
+
 class SandboxApplication : public Matter::Application {
 
 public:
 	SandboxApplication() {
 
-		APPLICATION_INFO("Sandbox Application Created.");
+		PushLayer(new ExampleLayer());
 
 	}
 
