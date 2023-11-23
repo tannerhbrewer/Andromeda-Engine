@@ -7,6 +7,8 @@ namespace Matter {
 	class OpenGLRendererAPI : public RendererAPI {
 
 	public:
+		virtual void Initialize() override;
+
 		virtual void SetClearColor(const glm::vec4& color) override;
 		virtual void Clear() override;
 

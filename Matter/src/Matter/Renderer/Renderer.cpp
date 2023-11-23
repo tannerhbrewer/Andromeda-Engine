@@ -8,6 +8,12 @@ namespace Matter {
 
 	Renderer::SceneData* Renderer::s_SceneData = new Renderer::SceneData;
 
+	void Renderer::Initialize() {
+
+		RenderCommand::Initialize();
+
+	}
+
 	void Renderer::BeginScene(OrthographicCamera& camera) {
 
 		s_SceneData->ViewProjectionMatrix = camera.GetViewProjectionMatrix();
