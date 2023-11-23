@@ -6,6 +6,8 @@
 
 #include "Matter/ImGui/ImGuiLayer.h"
 
+#include "Matter/Renderer/Shader.h"
+
 #include "Matter/Core/Window.h"
 
 namespace Matter {
@@ -35,6 +37,7 @@ namespace Matter {
 		LayerStack m_LayerStack;
 
 		unsigned int m_VertexArray, m_VertexBuffer, m_IndexBuffer;
+		std::unique_ptr<Shader> m_Shader;
 
 		bool m_Running = true;
 
