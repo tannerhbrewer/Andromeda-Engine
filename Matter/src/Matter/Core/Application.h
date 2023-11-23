@@ -10,6 +10,8 @@
 #include "Matter/Renderer/Buffer.h"
 #include "Matter/Renderer/VertexArray.h"
 
+#include "Matter/Renderer/OrthographicCamera.h"
+
 #include "Matter/Core/Window.h"
 
 namespace Matter {
@@ -43,6 +45,8 @@ namespace Matter {
 
 		std::shared_ptr<Shader> m_BlueShader;
 		std::shared_ptr<VertexArray> m_SquareVA;
+
+		OrthographicCamera m_Camera;
 
 		bool m_Running = true;
 
