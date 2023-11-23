@@ -15,6 +15,8 @@ project "Matter"
 
 		"src/**.h",
 		"src/**.cpp",
+		"Dependencies/stb_image/**.h",
+		"Dependencies/stb_image/**.cpp",
 		"Dependencies/glm/glm/**.hpp",
 		"Dependencies/glm/glm/**.inl",
 
@@ -28,6 +30,7 @@ project "Matter"
 		"Dependencies/Glad/include",
 		"Dependencies/imgui",
 		"Dependencies/glm",
+		"Dependencies/stb_image",
 
 	}
 

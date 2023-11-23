@@ -22,6 +22,7 @@
 
 #include "Matter/Renderer/Buffer.h"
 #include "Matter/Renderer/Shader.h"
+#include "Matter/Renderer/Texture.h"
 #include "Matter/Renderer/VertexArray.h"
 
 #include "Matter/Renderer/OrthographicCamera.h"
