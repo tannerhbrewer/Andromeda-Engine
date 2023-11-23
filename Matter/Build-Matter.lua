@@ -50,6 +50,12 @@ project "Matter"
 
 	}
 
+	flags {
+
+		"MultiProcessorCompile",
+
+	}
+
 	filter "system:windows"
        systemversion "latest"
        defines { "MATTER_PLATFORM_WINDOWS", }
