@@ -87,8 +87,8 @@ namespace Matter {
 
 	void ImGuiLayer::ImGuiRender() {
 
-		static bool show = true;
-		ImGui::ShowDemoWindow(&show);
+		//static bool show = true;
+		//ImGui::ShowDemoWindow(&show);
 
 	}
 
