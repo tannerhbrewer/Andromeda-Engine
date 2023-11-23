@@ -1,5 +1,7 @@
 #pragma once
 
+#include "Matter/Core/Timestep.h"
+
 #include "Matter/Events/Event.h"
 
 namespace Matter {
@@ -12,7 +14,7 @@ namespace Matter {
 
 		virtual void Attach() {}
 		virtual void Detach() {}
-		virtual void Update() {}
+		virtual void Update(Timestep ts) {}
 		virtual void ImGuiRender() {}
 		virtual void OnEvent(Event& e) {}
 

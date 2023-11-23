@@ -1,18 +1,14 @@
 #pragma once
 
 #include "Matter/Core/LayerStack.h"
+#include "Matter/Core/Window.h"
+#include "Matter/Core/Timestep.h"
+
 #include "Matter/Events/Event.h"
 #include "Matter/Events/ApplicationEvent.h"
 
 #include "Matter/ImGui/ImGuiLayer.h"
 
-#include "Matter/Renderer/Shader.h"
-#include "Matter/Renderer/Buffer.h"
-#include "Matter/Renderer/VertexArray.h"
-
-#include "Matter/Renderer/OrthographicCamera.h"
-
-#include "Matter/Core/Window.h"
 
 namespace Matter {
 
@@ -40,13 +36,7 @@ namespace Matter {
 		ImGuiLayer* m_ImGuiLayer;
 		LayerStack m_LayerStack;
 
-		std::shared_ptr<Shader> m_Shader;
-		std::shared_ptr<VertexArray> m_VertexArray;
-
-		std::shared_ptr<Shader> m_BlueShader;
-		std::shared_ptr<VertexArray> m_SquareVA;
-
-		OrthographicCamera m_Camera;
+		float m_LastFrameTime = 0.0f;
 
 		bool m_Running = true;
 
