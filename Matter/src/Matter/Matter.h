@@ -9,6 +9,7 @@
 #include "Matter/Core/Input.h"
 #include "Matter/Core/KeyCodes.h"
 #include "Matter/Core/MouseButtonCodes.h"
+#include "Matter/Core/OrthographicCameraController.h"
 
 #include "Matter/Core/Timestep.h"
 
