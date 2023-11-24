@@ -21,7 +21,9 @@ private:
 	// Temp
 	Matter::Ref<Matter::VertexArray> m_SquareVA;
 	Matter::Ref<Matter::Shader> m_FlatColorShader;
+	Matter::Ref<Matter::Texture2D> m_CheckerboardTexture;
 
 	glm::vec4 m_SquareColor = { 0.2f, 0.3f, 0.8f, 1.0f };
+	glm::vec2 m_SquarePosition = { 0.0f, 0.0f };
 
 };

@@ -19,6 +19,7 @@
 
 // ----- Renderer -----
 #include "Matter/Renderer/Renderer.h"
+#include "Matter/Renderer/Renderer2D.h"
 #include "Matter/Renderer/RenderCommand.h"
 
 #include "Matter/Renderer/Buffer.h"

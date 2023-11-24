@@ -2,6 +2,8 @@
 
 #include "Renderer.h"
 
+#include "Matter/Renderer/Renderer2D.h"
+
 #include "Platform/OpenGL/OpenGLShader.h"
 
 namespace Matter {
@@ -11,6 +13,7 @@ namespace Matter {
 	void Renderer::Initialize() {
 
 		RenderCommand::Initialize();
+		Renderer2D::Initialize();
 
 	}
 
