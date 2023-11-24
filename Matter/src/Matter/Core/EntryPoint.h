@@ -1,5 +1,7 @@
 #pragma once
 
+#include "Matter/Core/Base.h"
+
 #ifdef MATTER_PLATFORM_WINDOWS
  
 

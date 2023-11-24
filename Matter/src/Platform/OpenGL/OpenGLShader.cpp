@@ -1,6 +1,6 @@
 #include "mtpch.h"
 
-#include "OpenGLShader.h"
+#include "Platform/OpenGL/OpenGLShader.h"
 
 #include "Matter/Core/Base.h"
 

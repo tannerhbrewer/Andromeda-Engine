@@ -1,13 +1,13 @@
 #include "mtpch.h"
 
-#include "Logger.h"
+#include "Matter/Core/Logger.h"
 
-#include "spdlog/sinks/stdout_color_sinks.h"
+#include <spdlog/sinks/stdout_color_sinks.h>
 
 namespace Matter {
 
-	std::shared_ptr<spdlog::logger> Logger::s_EngineLogger;
-	std::shared_ptr<spdlog::logger> Logger::s_ClientLogger;
+	Ref<spdlog::logger> Logger::s_EngineLogger;
+	Ref<spdlog::logger> Logger::s_ClientLogger;
 
 	void Logger::Initialize() {
 

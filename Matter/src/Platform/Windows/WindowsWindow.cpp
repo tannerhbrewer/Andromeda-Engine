@@ -1,6 +1,6 @@
 #include "mtpch.h"
 
-#include "WindowsWindow.h"
+#include "Platform/Windows/WindowsWindow.h"
 
 #include "Matter/Events/ApplicationEvent.h"
 #include "Matter/Events/KeyEvent.h"
@@ -12,15 +12,17 @@ namespace Matter {
 
 	static bool s_GLFWInitialized = false;
 
+	static uint8_t s_GLFWWindowCount = 0;
+
 	static void GLFWErrorCallback(int error, const char* description) {
 
 		MATTER_ERROR("GLFW Error ({0}): {1}", error, description);
 
 	}
 
-	Window* Window::Create(const WindowProperties& properties) {
+	Scope<Window> Window::Create(const WindowProperties& properties) {
 
-		return new WindowsWindow(properties);
+		return CreateScope<WindowsWindow>(properties);
 
 	}
 
@@ -42,7 +44,9 @@ namespace Matter {
 		m_Data.Width = properties.Width;
 		m_Data.Height = properties.Height;
 
+		#ifdef MATTER_DEBUG
 		MATTER_INFO("Creating window {0} ({1}, {2})", properties.Title, properties.Width, properties.Height);
+		#endif
 
 		if (!s_GLFWInitialized) {
 
@@ -57,7 +61,7 @@ namespace Matter {
 
 		m_Window = glfwCreateWindow((int)properties.Width, (int)properties.Height, m_Data.Title.c_str(), nullptr, nullptr);
 		
-		m_Context = CreateScope<OpenGLContext>(m_Window);
+		m_Context = GraphicsContext::Create(m_Window);
 		m_Context->Initialize();
 
 		glfwSetWindowUserPointer(m_Window, &m_Data);
@@ -174,6 +178,13 @@ namespace Matter {
 	void WindowsWindow::Shutdown() {
 
 		glfwDestroyWindow(m_Window);
+		--s_GLFWWindowCount;
+
+		if (s_GLFWWindowCount == 0)
+		{
+			MATTER_INFO("Terminating GLFW");
+			glfwTerminate();
+		}
 
 	}
 	

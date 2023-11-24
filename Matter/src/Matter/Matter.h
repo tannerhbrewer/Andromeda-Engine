@@ -2,6 +2,8 @@
 
 // ----- Core -----
 
+#include "Matter/Core/Base.h"
+
 #include "Matter/Core/Application.h"
 #include "Matter/Core/Logger.h"
 #include "Matter/Core/Layer.h"

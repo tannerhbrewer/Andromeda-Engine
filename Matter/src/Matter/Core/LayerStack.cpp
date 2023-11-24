@@ -1,14 +1,8 @@
 #include "mtpch.h"
 
-#include "LayerStack.h"
+#include "Matter/Core/LayerStack.h"
 
 namespace Matter {
-
-	LayerStack::LayerStack() {
-
-		
-
-	}
 
 	LayerStack::~LayerStack() {
 

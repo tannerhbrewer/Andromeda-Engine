@@ -1,6 +1,6 @@
 #include "mtpch.h"
 
-#include "OpenGLVertexArray.h"
+#include "Platform/OpenGL/OpenGLVertexArray.h"
 
 #include <glad/glad.h>
 
@@ -10,17 +10,17 @@ namespace Matter {
 
 		switch (type) {
 
-		case Matter::ShaderDataType::Float:    return GL_FLOAT;
-		case Matter::ShaderDataType::Float2:   return GL_FLOAT;
-		case Matter::ShaderDataType::Float3:   return GL_FLOAT;
-		case Matter::ShaderDataType::Float4:   return GL_FLOAT;
-		case Matter::ShaderDataType::Mat3:     return GL_FLOAT;
-		case Matter::ShaderDataType::Mat4:     return GL_FLOAT;
-		case Matter::ShaderDataType::Int:      return GL_INT;
-		case Matter::ShaderDataType::Int2:     return GL_INT;
-		case Matter::ShaderDataType::Int3:     return GL_INT;
-		case Matter::ShaderDataType::Int4:     return GL_INT;
-		case Matter::ShaderDataType::Bool:     return GL_BOOL;
+			case ShaderDataType::Float:    return GL_FLOAT;
+			case ShaderDataType::Float2:   return GL_FLOAT;
+			case ShaderDataType::Float3:   return GL_FLOAT;
+			case ShaderDataType::Float4:   return GL_FLOAT;
+			case ShaderDataType::Mat3:     return GL_FLOAT;
+			case ShaderDataType::Mat4:     return GL_FLOAT;
+			case ShaderDataType::Int:      return GL_INT;
+			case ShaderDataType::Int2:     return GL_INT;
+			case ShaderDataType::Int3:     return GL_INT;
+			case ShaderDataType::Int4:     return GL_INT;
+			case ShaderDataType::Bool:     return GL_BOOL;
 
 		}
 
@@ -53,7 +53,7 @@ namespace Matter {
 
 	}
 
-	void OpenGLVertexArray::AddVertexBuffer(const std::shared_ptr<VertexBuffer>& vertexBuffer) {
+	void OpenGLVertexArray::AddVertexBuffer(const Ref<VertexBuffer>& vertexBuffer) {
 
 		MATTER_ASSERT(vertexBuffer->GetLayout().GetElements().size(), "Vertex buffer has no layout.");
 
@@ -80,7 +80,7 @@ namespace Matter {
 
 	}
 
-	void OpenGLVertexArray::SetIndexBuffer(const std::shared_ptr<IndexBuffer>& indexBuffer) {
+	void OpenGLVertexArray::SetIndexBuffer(const Ref<IndexBuffer>& indexBuffer) {
 
 		glBindVertexArray(m_RendererID);
 		indexBuffer->Bind();

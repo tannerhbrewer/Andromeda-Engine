@@ -1,6 +1,6 @@
 #include "mtpch.h"
 
-#include "WindowsInput.h"
+#include "Platform/Windows/WindowsInput.h"
 
 #include "Matter/Core/Application.h"
 
