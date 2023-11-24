@@ -1,13 +1,14 @@
 #include <Matter/Matter.h>
+#include <Matter/Core/EntryPoint.h>
 
-#include "ExampleLayer.h"
+#include "Sandbox2D.h"
 
 class SandboxApplication : public Matter::Application {
 
 public:
 	SandboxApplication() {
 
-		PushLayer(new ExampleLayer());
+		PushLayer(new Sandbox2D());
 
 	}
 

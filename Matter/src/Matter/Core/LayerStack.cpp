@@ -12,8 +12,12 @@ namespace Matter {
 
 	LayerStack::~LayerStack() {
 
-		for (Layer* layer : m_Layers)
+		for (Layer* layer : m_Layers) {
+
+			layer->Detach();
 			delete layer;
+
+		}
 
 	}
 
